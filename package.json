@@ -17,6 +17,7 @@
     "test:spec:index": "jest ./src/__tests__/index.spec.js"
   },
   "devDependencies": {
+    "@knowdev/jest": "^0.1.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
