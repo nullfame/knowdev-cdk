@@ -31,7 +31,7 @@ afterEach(() => {
 // Run tests
 //
 
-describe("<%= Name %> <%= Subtype %>", () => {
+describe("<%= Name %> <%= subtype %>", () => {
   it("Works", async () => {
     const <%= name %> = require("../<%= name %>.<%= subtype %>");
     const response = await <%= name %>();
