@@ -6,6 +6,43 @@
 npm install --save @knowdev/cdk
 ```
 
+## 📖 Reference
+
+### Constants 💬
+
+#### Duration ⏲
+
+``` javascript
+const { DURATION } = require("@knowdev/cdk");
+
+DURATION = {
+  THIRTY_SECONDS,
+  ONE_MINUTE,
+  TWO_MINUTES,
+  FIVE_MINUTES,
+  TEN_MINUTES,
+  FIFTEEN_MINUTES,
+}
+```
+
+#### Tag 🔖
+
+``` javascript
+const { TAG } = require("@knowdev/cdk");
+
+TAG = {
+  ROLE: {
+    API,
+    COMMAND,
+    META,
+    PROCESSING,
+    ORCHESTRATION,
+    STORAGE,
+    WEB,
+  }
+}
+```
+
 ## 💻 Developing
 
 Current style is CommonJS (not ES6).
@@ -27,7 +64,7 @@ The `hygen` code templating system should be used for most new code:
   * Lambda
   * Dynamo
 
-### Wishlist
+### Wishlist 🌠
 
 ## 📜 License
 
