@@ -4,16 +4,6 @@ const { TAG } = require("./constants");
 
 //
 //
-// Constants
-//
-
-//
-//
-// Helper Functions
-//
-
-//
-//
 // Main
 //
 
