@@ -1,6 +1,6 @@
 const { DURATION, TAG } = require("./util/constants");
 const { cdk, tagger, VERSION } = require("./core");
-const { stack } = require("./stack");
+const stack = require("./stack");
 
 //
 //

@@ -29,4 +29,9 @@ describe("Index", () => {
     const Tagger = require("../util/Tagger");
     expect(tagger).toBeInstanceOf(Tagger);
   });
+
+  it("Returns stack function", () => {
+    const { stack } = require("../index");
+    expect(stack).toBeFunction();
+  });
 });
