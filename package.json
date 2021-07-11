@@ -35,6 +35,7 @@
     "sort-package-json": "^1.50.0"
   },
   "dependencies": {
-    "@aws-cdk/core": "^1.112.0"
+    "@aws-cdk/core": "^1.112.0",
+    "lodash.clonedeep": "^4.5.0"
   }
 }
