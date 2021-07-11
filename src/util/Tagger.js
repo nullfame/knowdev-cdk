@@ -20,21 +20,10 @@ const { TAG } = require("./constants");
 const Tagger = class {
   constructor() {
     this.role = {};
-    const resourcesByRole = Object.values(TAG.ROLE).reduce(
-      (accumulator, role) => {
-        accumulator[role] = [];
-        this.role[role] = (resource) => {
-          this.tag(resource, TAG.KEY.ROLE, role);
-        };
-        return accumulator;
-      },
-      {}
-    );
-
-    // Store all private members in a WeakMap
-    this.private = new WeakMap();
-    this.private.set(this, {
-      resourcesByRole,
+    Object.values(TAG.ROLE).forEach((role) => {
+      this.role[role] = (resource) => {
+        this.tag(resource, TAG.KEY.ROLE, role);
+      };
     });
   }
 
