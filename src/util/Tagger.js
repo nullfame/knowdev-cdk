@@ -23,8 +23,16 @@ const Tagger = class {
     Object.values(TAG.ROLE).forEach((role) => {
       this.role[role] = (resource) => {
         this.tag(resource, TAG.KEY.ROLE, role);
+        this.addMeta(resource);
       };
     });
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  addMeta(resource) {
+    cdk.Tags.of(resource).add(TAG.KEY.ACCOUNT, process.env.PROJECT_ACCOUNT);
+    cdk.Tags.of(resource).add(TAG.KEY.ENV, process.env.PROJECT_ENV);
+    cdk.Tags.of(resource).add(TAG.KEY.PROJECT, process.env.PROJECT_KEY);
   }
 
   // eslint-disable-next-line class-methods-use-this

@@ -6,6 +6,12 @@ const { TAG } = require("../constants");
 // Mock constants
 //
 
+const MOCK = {
+  ACCOUNT: "mockAccount",
+  ENV: "mockEnv",
+  PROJECT: "mockProject",
+};
+
 //
 //
 // Mock modules
@@ -76,5 +82,19 @@ describe("Tagger util", () => {
     tagger.role.api(resource);
     expect(mockCdkTagsOfResource).toHaveBeenCalledWith(resource);
     expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ROLE, TAG.ROLE.API);
+  });
+
+  it.only("Role tag applies meta", () => {
+    const tagger = new Tagger();
+    expect(tagger.role.api).toBeFunction();
+
+    process.env.PROJECT_ACCOUNT = MOCK.ACCOUNT;
+    process.env.PROJECT_ENV = MOCK.ENV;
+    process.env.PROJECT_KEY = MOCK.PROJECT;
+
+    tagger.role.api("TEST_RESOURCE");
+    expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ACCOUNT, MOCK.ACCOUNT);
+    expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ENV, MOCK.ENV);
+    expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.PROJECT, MOCK.PROJECT);
   });
 });
