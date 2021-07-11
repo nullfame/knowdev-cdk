@@ -1,6 +1,6 @@
 const { DURATION, TAG } = require("./util/constants");
+const { tagger } = require("./core");
 const { version } = require("../package.json");
-const Tagger = require("./util/Tagger");
 
 //
 //
@@ -10,6 +10,6 @@ const Tagger = require("./util/Tagger");
 module.exports = {
   DURATION,
   TAG,
-  tagger: new Tagger(),
+  tagger,
   VERSION: version,
 };
