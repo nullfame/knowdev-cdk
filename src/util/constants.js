@@ -15,6 +15,12 @@ module.exports = {
     FIFTEEN_MINUTES: cdk.Duration.seconds(60 * 15),
   },
   TAG: {
+    KEY: {
+      ACCOUNT: "account",
+      ENV: "env",
+      PROJECT: "project",
+      ROLE: "role",
+    },
     ROLE: {
       API: "api",
       COMMAND: "command",

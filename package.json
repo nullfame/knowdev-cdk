@@ -14,7 +14,8 @@
     "test": "jest src/",
     "test:clean": "rimraf coverage/",
     "test:coverage": "jest --coverage src/",
-    "test:spec:index": "jest ./src/__tests__/index.spec.js"
+    "test:spec:index": "jest ./src/__tests__/index.spec.js",
+    "test:spec:Tagger": "jest ./src/util/__tests__/Tagger.spec.js"
   },
   "devDependencies": {
     "@knowdev/jest": "^0.1.0",
