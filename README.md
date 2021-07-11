@@ -45,24 +45,6 @@ DURATION = {
 }
 ```
 
-#### Tag 🔖
-
-``` javascript
-const { TAG } = require("@knowdev/cdk");
-
-TAG = {
-  ROLE: {
-    API,
-    COMMAND,
-    META,
-    PROCESSING,
-    ORCHESTRATION,
-    STORAGE,
-    WEB,
-  }
-}
-```
-
 ## 💻 Developing
 
 Current style is CommonJS (not ES6).
