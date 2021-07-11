@@ -84,7 +84,7 @@ describe("Tagger util", () => {
     expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ROLE, TAG.ROLE.API);
   });
 
-  it.only("Role tag applies meta", () => {
+  it("Role tag applies meta", () => {
     const tagger = new Tagger();
     expect(tagger.role.api).toBeFunction();
 
