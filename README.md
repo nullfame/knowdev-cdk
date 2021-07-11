@@ -8,6 +8,26 @@ npm install --save @knowdev/cdk
 
 ## 📖 Reference
 
+### Helpers 📚
+
+#### Tagger
+
+``` javascript
+const { tagger } = require("@knowdev/cdk");
+
+// Manually add tag (does not call addMeta)
+tagger.tag(resource, key, value);
+
+// Automatic meta
+//   account: process.env.PROJECT_ACCOUNT
+//   env: process.env.PROJECT_ENV
+//   project: process.env.PROJECT_PROJECT
+tagger.addMeta(resource);
+
+// Convenience for role (calls addMeta)
+tagger.role.api(resource);
+```
+
 ### Constants 💬
 
 #### Duration ⏲
