@@ -1,3 +1,4 @@
+const { version } = require("../package.json");
 const Tagger = require("./util/Tagger");
 
 //
@@ -7,4 +8,5 @@ const Tagger = require("./util/Tagger");
 
 module.exports = {
   tagger: new Tagger(),
+  VERSION: version,
 };
