@@ -56,6 +56,8 @@ The `hygen` code templating system should be used for most new code:
 
 ## 📝 Changelog
 
+N/A
+
 ## 🛣 Roadmap
 
 * 0.1.0: Minimum Viable Something
@@ -66,6 +68,8 @@ The `hygen` code templating system should be used for most new code:
   * Dynamo
 
 ### Wishlist 🌠
+
+N/A
 
 ## 📜 License
 
