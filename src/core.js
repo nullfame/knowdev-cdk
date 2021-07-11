@@ -24,6 +24,7 @@ cdk.Tags.of(app).add("knowDevCdk", version);
 
 module.exports = {
   app,
+  cdk,
   tagger,
   VERSION: version,
 };
