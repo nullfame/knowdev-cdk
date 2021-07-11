@@ -20,6 +20,7 @@ module.exports = {
       ENV: "env",
       PROJECT: "project",
       ROLE: "role",
+      VERSION: "version",
     },
     ROLE: {
       API: "api",

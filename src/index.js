@@ -1,5 +1,6 @@
 const { DURATION, TAG } = require("./util/constants");
 const { tagger, VERSION } = require("./core");
+const { stack } = require("./stack");
 
 //
 //
@@ -8,6 +9,7 @@ const { tagger, VERSION } = require("./core");
 
 module.exports = {
   DURATION,
+  stack,
   TAG,
   tagger,
   VERSION,
