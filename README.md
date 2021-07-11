@@ -8,6 +8,20 @@ npm install --save @knowdev/cdk
 
 ## 📖 Reference
 
+### Resources ☁️
+
+#### CDK Stack
+
+##### cdk.app.js
+
+``` javascript
+const Construct = require("@knowdev/cdk");
+const Template = require("./template.cdk");
+const packageJson = require("./package.json");
+
+Construct.stack(Template, packageJson, {});
+```
+
 ### Helpers 📚
 
 #### Tagger
@@ -58,16 +72,21 @@ The `hygen` code templating system should be used for most new code:
 
 ## 📝 Changelog
 
-N/A
+* `0.1.0` Template/stack, tagger, constants
 
 ## 🛣 Roadmap
 
-* 0.1.0: Minimum Viable Something
-  * 🔲 Template/Stack
-  * ☑️ Tagger
-  * ☑️ Constants
-  * 🔲 Lambda
-  * 🔲 Dynamo
+* ☑️ `0.1.0`: Minimum Viable Something
+  * Template/Stack
+  * Tagger
+  * Constants
+* 🔲 `0.2.0`: Lambda
+* 🔲 `0.3.0`: Dynamo
+
+### Open Questions 🤔
+
+* 🔲 If the stack is tagged, do those tags trickle to all resources
+  * I.e., is it unnecessary to call addMeta() on sub-resources?
 
 ### Wishlist 🌠
 
