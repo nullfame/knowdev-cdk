@@ -16,7 +16,8 @@
     "test:coverage": "jest --coverage src/",
     "test:spec:index": "jest ./src/__tests__/index.spec.js",
     "test:spec:stack": "jest ./src/__tests__/stack.spec.js",
-    "test:spec:Tagger": "jest ./src/util/__tests__/Tagger.spec.js"
+    "test:spec:Tagger": "jest ./src/util/__tests__/Tagger.spec.js",
+    "postversion": "npm publish"
   },
   "devDependencies": {
     "@knowdev/jest": "^0.1.0",

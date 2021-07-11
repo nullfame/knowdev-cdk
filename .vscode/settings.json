@@ -5,6 +5,7 @@
     "clonedeep",
     "hygen",
     "knowdev",
+    "postversion",
     "subfolders",
     "templating"
   ]
