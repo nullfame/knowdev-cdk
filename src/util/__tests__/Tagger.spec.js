@@ -97,4 +97,26 @@ describe("Tagger util", () => {
     expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ENV, MOCK.ENV);
     expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.PROJECT, MOCK.PROJECT);
   });
+
+  it("Add meta function", () => {
+    const tagger = new Tagger();
+    expect(tagger.role.api).toBeFunction();
+
+    process.env.PROJECT_ACCOUNT = MOCK.ACCOUNT;
+    process.env.PROJECT_ENV = MOCK.ENV;
+    process.env.PROJECT_KEY = MOCK.PROJECT;
+
+    tagger.addMeta("TEST_RESOURCE");
+    expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ACCOUNT, MOCK.ACCOUNT);
+    expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.ENV, MOCK.ENV);
+    expect(mockCdkTagsAdd).toHaveBeenCalledWith(TAG.KEY.PROJECT, MOCK.PROJECT);
+  });
+
+  it("Add meta function doesn't call if environment isn't set", () => {
+    const tagger = new Tagger();
+    expect(tagger.role.api).toBeFunction();
+
+    tagger.addMeta("TEST_RESOURCE");
+    expect(mockCdkTagsAdd).not.toHaveBeenCalled();
+  });
 });

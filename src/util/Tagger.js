@@ -20,9 +20,12 @@ const Tagger = class {
 
   // eslint-disable-next-line class-methods-use-this
   addMeta(resource) {
-    cdk.Tags.of(resource).add(TAG.KEY.ACCOUNT, process.env.PROJECT_ACCOUNT);
-    cdk.Tags.of(resource).add(TAG.KEY.ENV, process.env.PROJECT_ENV);
-    cdk.Tags.of(resource).add(TAG.KEY.PROJECT, process.env.PROJECT_KEY);
+    if (process.env.PROJECT_ACCOUNT)
+      cdk.Tags.of(resource).add(TAG.KEY.ACCOUNT, process.env.PROJECT_ACCOUNT);
+    if (process.env.PROJECT_ENV)
+      cdk.Tags.of(resource).add(TAG.KEY.ENV, process.env.PROJECT_ENV);
+    if (process.env.PROJECT_KEY)
+      cdk.Tags.of(resource).add(TAG.KEY.PROJECT, process.env.PROJECT_KEY);
   }
 
   // eslint-disable-next-line class-methods-use-this
