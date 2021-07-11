@@ -1,14 +1,4 @@
-const { VERSION } = require("../index");
-
-//
-//
-// Mock constants
-//
-
-//
-//
-// Mock modules
-//
+/* eslint-disable global-require */
 
 //
 //
@@ -29,7 +19,14 @@ afterEach(() => {
 //
 
 describe("Index", () => {
-  it("Works", async () => {
+  it("Has version constant", () => {
+    const { VERSION } = require("../index");
     expect(VERSION).toBeString();
+  });
+
+  it("Returns instantiated tagger", () => {
+    const { tagger } = require("../index");
+    const Tagger = require("../util/Tagger");
+    expect(tagger).toBeInstanceOf(Tagger);
   });
 });

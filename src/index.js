@@ -10,6 +10,6 @@ const Tagger = require("./util/Tagger");
 module.exports = {
   DURATION,
   TAG,
-  Tagger,
+  tagger: new Tagger(),
   VERSION: version,
 };
