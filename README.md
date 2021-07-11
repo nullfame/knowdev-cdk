@@ -61,11 +61,11 @@ N/A
 ## 🛣 Roadmap
 
 * 0.1.0: Minimum Viable Something
-  * Template/Stack
-  * Tagger
-  * Constants
-  * Lambda
-  * Dynamo
+  * 🔲 Template/Stack
+  * ☑️ Tagger
+  * ☑️ Constants
+  * 🔲 Lambda
+  * 🔲 Dynamo
 
 ### Wishlist 🌠
 
