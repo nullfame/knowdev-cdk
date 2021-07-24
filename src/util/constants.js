@@ -17,7 +17,9 @@ module.exports = {
   TAG: {
     KEY: {
       ACCOUNT: "account",
+      BUILD_DATE: "buildDate",
       ENV: "env",
+      HANDLER: "handler",
       PROJECT: "project",
       ROLE: "role",
       VERSION: "version",
