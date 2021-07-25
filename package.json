@@ -21,6 +21,11 @@
     "test:spec:Tagger": "jest ./src/util/__tests__/Tagger.spec.js",
     "postversion": "npm publish"
   },
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.112.0",
+    "@aws-cdk/core": "^1.112.0",
+    "lodash.clonedeep": "^4.5.0"
+  },
   "devDependencies": {
     "@knowdev/jest": "^0.1.0",
     "eslint": "^7.30.0",
@@ -37,10 +42,5 @@
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.50.0"
-  },
-  "dependencies": {
-    "@aws-cdk/aws-lambda": "^1.112.0",
-    "@aws-cdk/core": "^1.112.0",
-    "lodash.clonedeep": "^4.5.0"
   }
 }
