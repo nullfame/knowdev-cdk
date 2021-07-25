@@ -22,6 +22,40 @@ const packageJson = require("./package.json");
 Construct.stack(Template, packageJson, {});
 ```
 
+#### CDK Template
+
+##### template.cdk.js
+
+``` javascript
+const { cdk } = require("@knowdev/cdk");
+
+class Template extends cdk.Stack {
+  constructor(scope, id, props) {
+    super(scope, id, props);
+    // Define resources...
+  }
+}
+
+module.exports = Template;
+```
+
+#### Lambda
+
+``` javascript
+// Inside Template constructor...
+lambda(this, "functionName");
+```
+
+##### Lambda Properties
+
+``` javascript
+lambda(this, "functionName", {
+  memorySize: 512,
+  runtime: lambda.Runtime.NODEJS_14_X,
+  timeout: DURATION.THIRTY_SECONDS,
+});
+```
+
 ### Helpers 📚
 
 #### Tagger
