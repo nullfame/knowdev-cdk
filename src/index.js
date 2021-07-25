@@ -1,5 +1,6 @@
 const { DURATION, TAG } = require("./util/constants");
 const { cdk, tagger, VERSION } = require("./core");
+const lambda = require("./lambda");
 const stack = require("./stack");
 const setLambdaDefaults = require("./util/setLambdaDefaults");
 
@@ -11,6 +12,7 @@ const setLambdaDefaults = require("./util/setLambdaDefaults");
 module.exports = {
   cdk,
   DURATION,
+  lambda,
   setLambdaDefaults,
   stack,
   TAG,

@@ -30,6 +30,11 @@ describe("Index", () => {
     expect(tagger).toBeInstanceOf(Tagger);
   });
 
+  it("Returns lambda function", () => {
+    const { lambda } = require("../index");
+    expect(lambda).toBeFunction();
+  });
+
   it("Returns stack function", () => {
     const { stack } = require("../index");
     expect(stack).toBeFunction();
