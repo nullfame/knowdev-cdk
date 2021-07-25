@@ -2,7 +2,7 @@ const { Duration } = require("@aws-cdk/core");
 const lambda = require("@aws-cdk/aws-lambda");
 
 const { TAG } = require("./util/constants");
-const { app, tagger } = require("./core");
+const { tagger } = require("./core");
 const {
   lambdaDefaultProperties,
   lambdaDefaultSettings,
@@ -58,7 +58,7 @@ const lambdaFunction = (stack, name, properties = {}, settings = {}) => {
   }
 
   // eslint-disable-next-line no-shadow
-  const lambdaFunction = new lambda.Function(stack, app, name, properties);
+  const lambdaFunction = new lambda.Function(stack, name, properties);
 
   // Tags: Apply to function (remember, some are applied at stack level)
   // Always-present tags:
