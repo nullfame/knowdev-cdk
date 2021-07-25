@@ -42,5 +42,9 @@
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "sort-package-json": "^1.50.0"
-  }
+  },
+  "include": [
+    "src/**",
+    "README.md"
+  ]
 }
