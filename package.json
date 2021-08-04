@@ -1,6 +1,6 @@
 {
   "name": "@knowdev/cdk",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "AWS Cloud Development Kit",
   "license": "UNLICENSED",
   "author": "Adam Finlayson",
