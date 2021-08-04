@@ -1,5 +1,6 @@
 const cdk = require("@aws-cdk/core");
 
+const { TAG } = require("./util/constants");
 const { version } = require("../package.json");
 const Tagger = require("./util/Tagger");
 
@@ -14,8 +15,10 @@ const tagger = new Tagger();
 
 // Tag
 const now = new Date();
-cdk.Tags.of(app).add("buildTime", String(now.getTime()));
-cdk.Tags.of(app).add("knowDevCdk", version);
+tagger.tag(app, TAG.KEY.BUILD_TIME, String(now.getTime()));
+tagger.tag(app, TAG.KEY.BUILD_DATE, now.toISOString());
+tagger.tag(app, TAG.KEY.KNOWDEV_CDK, version);
+tagger.addMeta(app);
 
 //
 //

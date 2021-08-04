@@ -18,8 +18,10 @@ module.exports = {
     KEY: {
       ACCOUNT: "account",
       BUILD_DATE: "buildDate",
+      BUILD_TIME: "buildTime",
       ENV: "env",
       HANDLER: "handler",
+      KNOWDEV_CDK: "knowDevCdk",
       PROJECT: "project",
       ROLE: "role",
       VERSION: "version",

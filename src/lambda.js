@@ -62,9 +62,7 @@ const lambdaFunction = (stack, name, properties = {}, settings = {}) => {
 
   // Tags: Apply to function (remember, some are applied at stack level)
   // Always-present tags:
-  tagger.tag(lambdaFunction, TAG.KEY.BUILD_DATE, new Date().toString());
   tagger.tag(lambdaFunction, TAG.KEY.HANDLER, name);
-  // Depending on environment tags:
   // User-supplied custom tags:
   if (tags && typeof tags === "object") {
     Object.keys(tags).forEach((key) => {
